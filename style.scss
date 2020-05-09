@@ -1,0 +1,51 @@
+$textcolor: #19767d;
+$almostwhite: #fdfdfd;
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+div.bodydiv {
+  background-color: $almostwhite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 23vw;
+    margin-top: -10vh;
+    align-self: center;
+  }
+  div.navdiv2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      padding: 0px;
+      li {
+        margin: 2vw;
+        font-size: 3.8rem;
+        a {
+          font-family: "Futura", "Century Gothic", "sans-serif";
+          color: $textcolor;
+          text-decoration: none;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        a:hover {
+          background-color: $textcolor;
+          border-radius: 15px;
+          color: $almostwhite;
+        }
+      }
+    }
+  }
+}
