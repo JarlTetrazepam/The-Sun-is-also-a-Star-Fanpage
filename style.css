@@ -6,37 +6,40 @@ body {
   margin: 0px;
 }
 
-div.bodydiv1 {
+div.slide1 {
+  height: 100vh;
   background-color: #fdfdfd;
-  height: 95vh;
+}
+div.slide1 div.bodydiv1 {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-div.bodydiv1 img {
+div.slide1 div.bodydiv1 img.headimg {
   width: 26vw;
   margin-top: -10vh;
   align-self: center;
 }
-div.bodydiv1 div.navdiv2 {
+div.slide1 div.bodydiv1 div.navdiv2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-div.bodydiv1 div.navdiv2 ul {
+div.slide1 div.bodydiv1 div.navdiv2 ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
   padding: 0px;
 }
-div.bodydiv1 div.navdiv2 ul li {
+div.slide1 div.bodydiv1 div.navdiv2 ul li {
   margin: 2vw;
   font-size: 3.8rem;
   padding-left: 5px;
   padding-right: 5px;
 }
-div.bodydiv1 div.navdiv2 ul li a {
+div.slide1 div.bodydiv1 div.navdiv2 ul li a {
   font-family: "Futura", "Century Gothic", "sans-serif";
   color: #19767d;
   text-decoration: none;
@@ -47,23 +50,29 @@ div.bodydiv1 div.navdiv2 ul li a {
   animation: rainbow 1.8s ease-in infinite;
   background-clip: text;
 }
-div.bodydiv1 div.navdiv2 ul li a:hover {
+div.slide1 div.bodydiv1 div.navdiv2 ul li a:hover {
   color: rgba(0, 0, 0, 0.0001);
 }
-div.bodydiv1 div.navdiv2 ul li:hover {
+div.slide1 div.bodydiv1 div.navdiv2 ul li:hover {
   background-color: #19767d;
   border-radius: 15px;
   transition: 0.2 ease-in-out;
 }
-
-div.arrowcontainer {
-  display: flex;
-  align-content: flex-end;
-  justify-content: center;
+div.slide1 div.arrowcontainer {
+  position: relative;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -40px;
 }
-div.arrowcontainer a {
+div.slide1 div.arrowcontainer a {
   color: black;
   text-decoration: none;
+}
+
+div.slide2 {
+  background-color: red;
+  height: 100vh;
 }
 
 #downarrow {
