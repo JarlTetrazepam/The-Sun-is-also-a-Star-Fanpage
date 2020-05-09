@@ -12,7 +12,7 @@
         <img src="The-Sun-Is-Also-A-Star_photos_v2_x4-removebg-preview.png" alt="Book Cover" id="headimg">
         <div class="navdiv2">
           <ul class="navbar">
-            <li><a href="#">CHARACTERS</a></li>
+            <li class="slideDown1"><a href="#">CHARACTERS</a></li>
             <li><a href="#">CHAPTERS</a></li>
             <li><a href="#">CAST</a></li>
             <li><a href="#">QUOTES</a></li>
@@ -20,13 +20,49 @@
         </div>
       </div>
       <div class="arrowcontainer">
-        <a data-scroll href="#slide2"><div class="arrow">
-          <img src="downarrow.ico" alt="arrowdown" height="25px" width="30px" id="downarrow">
+        <a data-scroll href="#"><div class="arrow">
+          <img class="slideDown2" src="downarrow.ico" alt="arrowdown" height="25px" width="30px" id="downarrow">
         </div></a>
       </div>
     </div>
     <div class="slide2" id="slide2">
-
+      1
     </div>
+    <script>
+      function smoothScroll(target,duration){
+        var target = document.querySelector(target);
+        var targetPosition = target.getBoundingClientRect().top + window.scrollY;
+        var startPosition = window.pageYOffset;
+        var startTime = null;
+
+        function animation(currentTime){
+          if(startTime === null) startTime = currentTime;
+          var timeElapsed = currentTime - startTime;
+          var run = ease(timeElapsed,startPosition,targetPosition,duration);
+          window.scrollTo(0,run);
+          if(timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+        	t /= d/2;
+        	if (t < 1) return c/2*t*t + b;
+        	t--;
+        	return -c/2 * (t*(t-2) - 1) + b;
+        };
+
+
+
+        requestAnimationFrame(animation);
+      }
+      var slideDown1 = document.querySelector('.slideDown1');
+      var slideDown2 = document.querySelector('.slideDown2');
+
+      slideDown1.addEventListener('click',function(){
+        smoothScroll('.slide2',500);
+      });
+      slideDown2.addEventListener('click',function(){
+        smoothScroll('.slide2',500);
+      });
+    </script>
   </body>
 </html>
