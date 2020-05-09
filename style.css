@@ -6,7 +6,7 @@ body {
   margin: 0px;
 }
 
-div.bodydiv {
+div.bodydiv1 {
   background-color: #fdfdfd;
   height: 100vh;
   display: flex;
@@ -14,29 +14,29 @@ div.bodydiv {
   justify-content: center;
   align-items: center;
 }
-div.bodydiv img {
+div.bodydiv1 img {
   width: 26vw;
   margin-top: -10vh;
   align-self: center;
 }
-div.bodydiv div.navdiv2 {
+div.bodydiv1 div.navdiv2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-div.bodydiv div.navdiv2 ul {
+div.bodydiv1 div.navdiv2 ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
   padding: 0px;
 }
-div.bodydiv div.navdiv2 ul li {
+div.bodydiv1 div.navdiv2 ul li {
   margin: 2vw;
   font-size: 3.8rem;
   padding-left: 5px;
   padding-right: 5px;
 }
-div.bodydiv div.navdiv2 ul li a {
+div.bodydiv1 div.navdiv2 ul li a {
   font-family: "Futura", "Century Gothic", "sans-serif";
   color: #19767d;
   text-decoration: none;
@@ -47,10 +47,10 @@ div.bodydiv div.navdiv2 ul li a {
   animation: rainbow 1.8s ease-in infinite;
   background-clip: text;
 }
-div.bodydiv div.navdiv2 ul li a:hover {
+div.bodydiv1 div.navdiv2 ul li a:hover {
   color: rgba(0, 0, 0, 0.0001);
 }
-div.bodydiv div.navdiv2 ul li:hover {
+div.bodydiv1 div.navdiv2 ul li:hover {
   background-color: #19767d;
   border-radius: 15px;
   transition: 0.2 ease-in-out;
