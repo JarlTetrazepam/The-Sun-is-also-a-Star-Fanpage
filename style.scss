@@ -20,8 +20,8 @@ div.slide1{
     justify-content: center;
     align-items: center;
 
-    img.headimg {
-      width: 26vw;
+    img {
+      width: 33vw;
       margin-top: -10vh;
       align-self: center;
     }
@@ -29,14 +29,18 @@ div.slide1{
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-shrink: 5;
       ul {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         list-style-type: none;
         padding: 0px;
         li {
           margin: 2vw;
-          font-size: 3.8rem;
+          //font-size: 3.8rem;
+          font-size: calc(1rem + 2.5vw);
           padding-left: 5px;
           padding-right: 5px;
           a {
@@ -89,4 +93,24 @@ div.slide2 {
   0%{background-position:top}
   50%{background-position:bottom}
   100%{background-position:top}
+}
+
+@media (max-width:1327px) {
+  img#headimg {
+    width: calc(35vw * 2 + 40px)
+  }
+  ul#navbar {
+    flex-direction: column;
+    li {
+        font-size: calc(1rem + 3vw);
+    }
+  }
+}
+
+@media (max-width:800px) {
+  ul#navbar {
+    li {
+      font-size: calc(1.7rem + 4vw);
+    }
+  }
 }
