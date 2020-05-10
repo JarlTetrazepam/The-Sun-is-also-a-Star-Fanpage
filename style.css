@@ -73,9 +73,36 @@ div.slide1 div.arrowcontainer a {
   text-decoration: none;
 }
 
+div.navdivmain2 {
+  background-color: #19767d;
+  height: 8vh;
+  width: 100vw;
+}
+div.navdivmain2 ul {
+  height: inherit;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 0;
+}
+div.navdivmain2 ul li {
+  margin-top: 0;
+}
+div.navdivmain2 ul li a {
+  text-decoration: none;
+  color: #fdfdfd;
+}
+
 div.slide2 {
   background-color: red;
-  height: 100vh;
+  height: 150vh;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
 }
 
 #downarrow {

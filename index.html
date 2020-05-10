@@ -20,15 +20,42 @@
         </div>
       </div>
       <div class="arrowcontainer">
-        <a data-scroll href="#"><div class="arrow">
-          <img class="slideDown2" src="downarrow.ico" alt="arrowdown" height="25px" width="30px" id="downarrow">
-        </div></a>
+        <a data-scroll href="#">
+          <div class="arrow">
+            <img class="slideDown2" src="downarrow.ico" alt="arrowdown" height="25px" width="30px" id="downarrow">
+          </div>
+        </a>
       </div>
-    </div>
-    <div class="slide2" id="slide2">
-      1
-    </div>
+      <div class="containerDiv">
+        <div class="navdivmain2" id="navdivmain">
+          <ul class="navdivmain">
+            <li class="slideDown3"><a href="#">CHARACTERS</a></li>
+            <li><a href="#">CHAPTERS</a></li>
+            <li><a href="#">CAST</a></li>
+            <li><a href="#">QUOTES</a></li>
+          </ul>
+        </div>
+        <div class="slide2" id="slide2">
+          1
+        </div>
+      </div>
     <script>
+        //stickyNavbar
+      window.onscroll = function() {stickyNavbar()};
+        var navdivmain = document.getElementById("navdivmain");
+        var sticky = navdivmain.offsetTop;
+        console.log(sticky);
+
+        function stickyNavbar() {
+          if (window.pageYOffset >= sticky) {
+            navdivmain.classList.add("sticky")
+          }
+          else {
+            navdivmain.classList.remove("sticky");
+          }
+        }
+
+        //smoothScroll
       function smoothScroll(target,duration){
         var target = document.querySelector(target);
         var targetPosition = target.getBoundingClientRect().top + window.scrollY;
@@ -50,12 +77,11 @@
         	return -c/2 * (t*(t-2) - 1) + b;
         };
 
-
-
         requestAnimationFrame(animation);
       }
       var slideDown1 = document.querySelector('.slideDown1');
       var slideDown2 = document.querySelector('.slideDown2');
+      var slideDown3 = document.querySelector('.slideDown3');
 
       slideDown1.addEventListener('click',function(){
         smoothScroll('.slide2',500);
@@ -63,6 +89,11 @@
       slideDown2.addEventListener('click',function(){
         smoothScroll('.slide2',500);
       });
+      slideDown3.addEventListener('click',function(){
+        smoothScroll('.slide2',500);
+      });
+
+
     </script>
   </body>
 </html>
