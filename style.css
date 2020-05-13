@@ -39,8 +39,8 @@ div.slide1 div.bodydiv1 div.navdiv2 ul {
 div.slide1 div.bodydiv1 div.navdiv2 ul li {
   margin: 2vw;
   font-size: calc(1rem + 2.5vw);
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 div.slide1 div.bodydiv1 div.navdiv2 ul li a {
   color: #19767d;
