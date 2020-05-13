@@ -53,14 +53,12 @@ div.slide1{
             animation: rainbow 1.8s ease-in infinite;
             background-clip: text;
           }
-          a:hover {
-            color: rgba(0,0,0,0.0001);
-          }
         }
         li:hover {
           background-color: $textcolor;
           border-radius: 15px;
           transition: 0.2 ease-in-out;
+          a {color: rgba(0,0,0,0.0001);}
         }
       }
     }

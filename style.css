@@ -52,13 +52,13 @@ div.slide1 div.bodydiv1 div.navdiv2 ul li a {
   animation: rainbow 1.8s ease-in infinite;
   background-clip: text;
 }
-div.slide1 div.bodydiv1 div.navdiv2 ul li a:hover {
-  color: rgba(0, 0, 0, 0.0001);
-}
 div.slide1 div.bodydiv1 div.navdiv2 ul li:hover {
   background-color: #19767d;
   border-radius: 15px;
   transition: 0.2 ease-in-out;
+}
+div.slide1 div.bodydiv1 div.navdiv2 ul li:hover a {
+  color: rgba(0, 0, 0, 0.0001);
 }
 div.slide1 div.arrowcontainer {
   position: relative;
