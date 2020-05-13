@@ -93,11 +93,14 @@ div.navdivmain2 ul li {
 }
 div.navdivmain2 ul li a {
   text-decoration: none;
-  color: #fdfdfd;
+  color: #F4C66B;
+}
+div.navdivmain2 ul li:hover a {
+  color: rgba(0, 0, 0, 0.0001);
 }
 
 div.slide2 {
-  background-color: red;
+  background-color: #fdfdfd;
   height: 150vh;
 }
 

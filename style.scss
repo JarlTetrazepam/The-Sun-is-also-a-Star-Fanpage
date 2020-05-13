@@ -1,5 +1,7 @@
 $textcolor: #19767d;
+$textcolordarker: #145e64;
 $almostwhite: #fdfdfd;
+
 
 html {
   font-family: "Futura", "Century Gothic", "sans-serif";
@@ -94,14 +96,19 @@ div.navdivmain2 {
       font-size: calc(.2rem + 2vw);
       a {
         text-decoration: none;
-        color: $almostwhite;
+        color: #F4C66B;
+      }
+    }
+    li:hover {
+      a {
+        color: rgba(0,0,0,0.0001);
       }
     }
   }
 }
 
 div.slide2 {
-  background-color: red;
+  background-color: $almostwhite;
   height: 150vh;
 }
 
