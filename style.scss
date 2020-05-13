@@ -2,7 +2,7 @@ $textcolor: #19767d;
 $almostwhite: #fdfdfd;
 
 html {
-  font-family: sans-serif;
+  font-family: "Futura", "Century Gothic", "sans-serif";
 }
 
 body {
@@ -44,7 +44,6 @@ div.slide1{
           padding-left: 5px;
           padding-right: 5px;
           a {
-            font-family: "Futura", "Century Gothic", "sans-serif";
             color: $textcolor;
             text-decoration: none;
             border-radius: 15px;
@@ -72,6 +71,7 @@ div.slide1{
     margin-left: auto;
     margin-right: auto;
     margin-top: -40px;
+    margin-bottom: 6px;
     a {
       color: black;
       text-decoration: none;
@@ -82,7 +82,7 @@ div.slide1{
 div.navdivmain2 {
   background-color: $textcolor;
   height: 8vh;
-  width: 100vw;
+  width: 100%;
   ul {
     height: inherit;
     display: flex;
@@ -93,6 +93,7 @@ div.navdivmain2 {
     margin-top: 0;
     li {
       margin-top: 0;
+      font-size: calc(.2rem + 2vw);
       a {
         text-decoration: none;
         color: $almostwhite;
@@ -104,6 +105,18 @@ div.navdivmain2 {
 div.slide2 {
   background-color: red;
   height: 150vh;
+}
+
+.rainbow {
+  transition: .1s ease-in-out;
+  background: linear-gradient(to bottom,#cf5476,#ecac6a,#dc6165,#926893,#eb714e);
+  background-size: 200% 200%;
+  animation: rainbow 1.8s ease-in infinite;
+  background-clip: text;
+}
+
+a.rainbow:hover {
+  color: rgba(0,0,0,0.0001);
 }
 
 .sticky {

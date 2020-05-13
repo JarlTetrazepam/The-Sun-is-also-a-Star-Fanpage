@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: "Futura", "Century Gothic", "sans-serif";
 }
 
 body {
@@ -43,7 +43,6 @@ div.slide1 div.bodydiv1 div.navdiv2 ul li {
   padding-right: 5px;
 }
 div.slide1 div.bodydiv1 div.navdiv2 ul li a {
-  font-family: "Futura", "Century Gothic", "sans-serif";
   color: #19767d;
   text-decoration: none;
   border-radius: 15px;
@@ -67,6 +66,7 @@ div.slide1 div.arrowcontainer {
   margin-left: auto;
   margin-right: auto;
   margin-top: -40px;
+  margin-bottom: 6px;
 }
 div.slide1 div.arrowcontainer a {
   color: black;
@@ -76,7 +76,7 @@ div.slide1 div.arrowcontainer a {
 div.navdivmain2 {
   background-color: #19767d;
   height: 8vh;
-  width: 100vw;
+  width: 100%;
 }
 div.navdivmain2 ul {
   height: inherit;
@@ -89,6 +89,7 @@ div.navdivmain2 ul {
 }
 div.navdivmain2 ul li {
   margin-top: 0;
+  font-size: calc(.2rem + 2vw);
 }
 div.navdivmain2 ul li a {
   text-decoration: none;
@@ -98,6 +99,18 @@ div.navdivmain2 ul li a {
 div.slide2 {
   background-color: red;
   height: 150vh;
+}
+
+.rainbow {
+  transition: 0.1s ease-in-out;
+  background: linear-gradient(to bottom, #cf5476, #ecac6a, #dc6165, #926893, #eb714e);
+  background-size: 200% 200%;
+  animation: rainbow 1.8s ease-in infinite;
+  background-clip: text;
+}
+
+a.rainbow:hover {
+  color: rgba(0, 0, 0, 0.0001);
 }
 
 .sticky {
