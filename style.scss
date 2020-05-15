@@ -1,7 +1,7 @@
 $textcolor: #19767d;
 $textcolordarker: #145e64;
 $almostwhite: #fdfdfd;
-
+$goldLike: #F4C66B;
 
 html {
   font-family: "Futura", "Century Gothic", "sans-serif";
@@ -108,8 +108,109 @@ div.navdivmain2 {
 }
 
 div.slide2 {
-  background-color: $almostwhite;
-  height: 100vh;
+  background-color: $textcolordarker;
+  height: 92vh;
+}
+
+.slide2Grid {
+  height: 92vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.618fr 1fr;
+  grid-template-areas:
+  "natasha john"
+  "lineup lineup";
+  grid-gap: 1px 1px;
+  color: white;
+}
+
+.natasha {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("Natasha.png");
+  background-size: cover;
+  grid-area: natasha;
+  padding: 1vw;
+  overflow: hidden;
+  div {
+    width: 18em;
+    font-size: 2.4vh;
+    p {
+      visibility: hidden;
+      text-align: right;
+    }
+  }
+}
+
+.natasha:hover {  //maybe build perm on click later
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("Natasha.png");
+    p {
+      visibility: visible;
+      text-align: right;
+      animation: 0.3s slideIn 0s forwards;
+      transform:translateX(100%);
+    }
+}
+
+.john {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("John.png");
+  background-size: cover;
+  grid-area: john;
+  overflow: hidden;
+  padding: 1vw;
+  div {
+    width: 18em;
+    font-size: 2.4vh;
+    p {
+      visibility: hidden;
+      text-align: left;
+    }
+  }
+}
+
+.john:hover {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("John.png");
+    p {
+      visibility: visible;
+      animation: 0.3s slideIn 0s forwards;
+      transform:translateX(-100%);
+    }
+}
+
+.lineup {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  background-color: #1E1E1E;
+  grid-area: lineup;
+  color: $goldLike;
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25vw;
+  }
+  img{
+    width: 10vw;
+    height: 10vw;
+    margin-bottom: 0.8vh;
+  }
 }
 
 .rainbow {
@@ -125,7 +226,7 @@ a.rainbow:hover {
 }
 
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
 }
 
@@ -138,6 +239,13 @@ a.rainbow:hover {
   0%{background-position:top}
   50%{background-position:bottom}
   100%{background-position:top}
+}
+
+
+@keyframes slideIn {
+  to {
+    transform:translateX(0);
+  }
 }
 
 @media (max-width:1327px) {
@@ -156,6 +264,50 @@ a.rainbow:hover {
   ul#navbar {
     li {
       font-size: calc(1.7rem + 4vw);
+    }
+  }
+  .lineup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+                "jeremy jeremy"
+                "samuel charles"
+                "patricia dae"
+                "peter min";
+    background-color: #1E1E1E;
+    align-items: center;
+    color: $goldLike;
+    overflow: scroll;   // needs scroll indicator
+    span.jeremy {
+      grid-area: jeremy;
+    }
+    span.samuel {
+      grid-area: samuel;
+    }
+    span.charles {
+      grid-area: charles;
+    }
+    span.patricia {
+      grid-area: patricia;
+    }
+    span.dae {
+      grid-area: dae;
+    }
+    span.peter {
+      grid-area: peter;
+    }
+    span.min {
+      grid-area: min;
+    }
+    span {
+      font-size: 1.8vw;
+    }
+    img{
+      margin-top: 2vh;
+      width: 20vw;
+      height: 20vw;
+      margin-bottom: 0.8vh;
     }
   }
 }

@@ -100,8 +100,97 @@ div.navdivmain2 ul li:hover a {
 }
 
 div.slide2 {
-  background-color: #fdfdfd;
-  height: 100vh;
+  background-color: #145e64;
+  height: 92vh;
+}
+
+.slide2Grid {
+  height: 92vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.618fr 1fr;
+  grid-template-areas: "natasha john" "lineup lineup";
+  grid-gap: 1px 1px;
+  color: white;
+}
+
+.natasha {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("Natasha.png");
+  background-size: cover;
+  grid-area: natasha;
+  padding: 1vw;
+  overflow: hidden;
+}
+.natasha div {
+  width: 18em;
+  font-size: 2.4vh;
+}
+.natasha div p {
+  visibility: hidden;
+  text-align: right;
+}
+
+.natasha:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Natasha.png");
+}
+.natasha:hover p {
+  visibility: visible;
+  text-align: right;
+  animation: 0.3s slideIn 0s forwards;
+  transform: translateX(100%);
+}
+
+.john {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("John.png");
+  background-size: cover;
+  grid-area: john;
+  overflow: hidden;
+  padding: 1vw;
+}
+.john div {
+  width: 18em;
+  font-size: 2.4vh;
+}
+.john div p {
+  visibility: hidden;
+  text-align: left;
+}
+
+.john:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("John.png");
+}
+.john:hover p {
+  visibility: visible;
+  animation: 0.3s slideIn 0s forwards;
+  transform: translateX(-100%);
+}
+
+.lineup {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  background-color: #1E1E1E;
+  grid-area: lineup;
+  color: #F4C66B;
+}
+.lineup span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25vw;
+}
+.lineup img {
+  width: 10vw;
+  height: 10vw;
+  margin-bottom: 0.8vh;
 }
 
 .rainbow {
@@ -117,7 +206,7 @@ a.rainbow:hover {
 }
 
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
 }
 
@@ -137,6 +226,11 @@ a.rainbow:hover {
     background-position: top;
   }
 }
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
 @media (max-width: 1327px) {
   img#headimg {
     width: calc(35vw * 2 + 40px);
@@ -152,6 +246,47 @@ a.rainbow:hover {
 @media (max-width: 800px) {
   ul#navbar li {
     font-size: calc(1.7rem + 4vw);
+  }
+
+  .lineup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "jeremy jeremy" "samuel charles" "patricia dae" "peter min";
+    background-color: #1E1E1E;
+    align-items: center;
+    color: #F4C66B;
+    overflow: scroll;
+  }
+  .lineup span.jeremy {
+    grid-area: jeremy;
+  }
+  .lineup span.samuel {
+    grid-area: samuel;
+  }
+  .lineup span.charles {
+    grid-area: charles;
+  }
+  .lineup span.patricia {
+    grid-area: patricia;
+  }
+  .lineup span.dae {
+    grid-area: dae;
+  }
+  .lineup span.peter {
+    grid-area: peter;
+  }
+  .lineup span.min {
+    grid-area: min;
+  }
+  .lineup span {
+    font-size: 1.8vw;
+  }
+  .lineup img {
+    margin-top: 2vh;
+    width: 20vw;
+    height: 20vw;
+    margin-bottom: 0.8vh;
   }
 }
 
