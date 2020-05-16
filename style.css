@@ -187,12 +187,12 @@ div.slide2 {
   align-items: center;
   font-size: 1.25vw;
   transition-timing-function: ease-out;
-  transition: 0.25s;
+  transition: 0.1s;
   transform: scale(1);
 }
 .lineup span:hover {
   transition-timing-function: ease-out;
-  transition: 0.25s;
+  transition: 0.2s;
   transform: scale(1.1);
 }
 .lineup img {
@@ -256,6 +256,10 @@ div.slide2 {
   grid-area: img;
   width: 100%;
   height: 100%;
+}
+
+.visible {
+  visibility: visible !important;
 }
 
 .rainbow {

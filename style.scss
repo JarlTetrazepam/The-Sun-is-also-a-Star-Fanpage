@@ -206,12 +206,12 @@ div.slide2 {
     align-items: center;
     font-size: 1.25vw;
     transition-timing-function: ease-out;
-    transition: 0.25s;
+    transition: 0.10s;
     transform: scale(1.0);
   }
   span:hover {
     transition-timing-function: ease-out;
-    transition: 0.25s;
+    transition: 0.20s;
     transform: scale(1.1);
   }
   img {
@@ -277,6 +277,10 @@ div.slide2 {
       height: 100%;
     }
   }
+}
+
+.visible {
+  visibility: visible !important;
 }
 
 .rainbow {

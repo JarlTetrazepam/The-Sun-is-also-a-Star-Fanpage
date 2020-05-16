@@ -63,7 +63,7 @@
               </div>
 
               <div class="lineup">
-                <span id="peter"><img src="Peter.png" alt="Peter Kingsley">Peter Kingsley</span>
+                <span id="peter" class=""><img src="Peter.png" alt="Peter Kingsley">Peter Kingsley</span>
                 <span id="patricia"><img src="Patricia.png" alt="Patricia Kingsley">Patricia Kingsley</span>
                 <span id="samuel"><img src="Samuel.png" alt="Samuel Kingsley">Samuel Kingsley</span>
                 <span id="jeremy"><img src="Jeremy.png" alt="Jeremy Martinez">Jeremy Martinez</span>
@@ -139,18 +139,16 @@
       });
 
       //Flashcards - not yet tho lol
-      function() {stickyNavbar()};
-        var navdivmain = document.getElementById("");
-        var sticky = navdivmain.offsetTop;
-
-        function stickyNavbar() {
-          if (window.pageYOffset >= sticky) {
-            navdivmain.classList.add("")
-          }
-          else {
-            navdivmain.classList.remove("");
-          }
-        }
+      var peter = document.querySelector('#peter');
+      var peterClass = document.querySelector('.peter');
+      var removal = document.querySelectorAll('.natasha')
+//console.log(removal)
+      peter.addEventListener('click',function(){
+        peterClass.classList.add("visible")
+      });
+    /*  peter.addEventListener('click',function(){
+        peterClass.classList.remove("visible")
+      }); */
     </script>
   </body>
 </html>
