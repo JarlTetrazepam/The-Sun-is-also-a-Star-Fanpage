@@ -42,8 +42,7 @@
             <div class="backgroundDarkener">
             </div>
             <div class="slide2Grid">
-
-              <div class="natasha">
+              <div class="natasha" tabindex="-1">
                 <div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse ac rutrum metus. Proin placerat nunc eu tellus convallis, in fringilla justo sollicitudin.
@@ -52,7 +51,7 @@
                     Vivamus scelerisque metus in tincidunt feugiat. </p>
                 </div>
               </div>
-              <div class="john">
+              <div class="john" tabindex="-1">
                 <div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Suspendisse ac rutrum metus. Proin placerat nunc eu tellus convallis, in fringilla justo sollicitudin.
@@ -138,17 +137,21 @@
         smoothScroll('.slide2',500);
       });
 
-      //Flashcards - not yet tho lol
+      //Flashcards
       var peter = document.querySelector('#peter');
       var peterClass = document.querySelector('.peter');
-      var removal = document.querySelectorAll('.natasha')
-//console.log(removal)
+      var removal = document.querySelector('.backgroundDarkener');
+      var toBeDarkened = document.querySelector('.backgroundDarkener');
+
+      removal.addEventListener('click',function(){
+          peterClass.classList.toggle('visible');
+          toBeDarkened.classList.toggle('darker');
+        });
       peter.addEventListener('click',function(){
-        peterClass.classList.add("visible")
-      });
-    /*  peter.addEventListener('click',function(){
-        peterClass.classList.remove("visible")
-      }); */
+          peterClass.classList.toggle('visible');
+          toBeDarkened.classList.toggle('darker');
+        });
+
     </script>
   </body>
 </html>

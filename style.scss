@@ -80,6 +80,7 @@ div.slide1{
 }
 
 div.navdivmain2 {
+  z-index: 10;
   background-color: $textcolor;
   height: 8vh;
   width: 100%;
@@ -113,7 +114,7 @@ div.slide2 {
 }
 
 .slide2Grid {
-  height: 92vh;
+  height: 92.1vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1.618fr 1fr;
@@ -141,21 +142,21 @@ div.slide2 {
       text-align: right;
     }
   }
-}
-
-.natasha:hover {  //maybe build perm on click later
-  background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url("Natasha.png");
-    p {
-      visibility: visible;
-      text-align: right;
-      animation: 0.3s slideIn 0s forwards;
-      transform:translateX(100%);
-    }
+  &:hover,
+  &:focus {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("Natasha.png");
+      p {
+        visibility: visible;
+        text-align: right;
+        animation: 0.3s slideIn 0s forwards;
+        transform:translateX(100%);
+      }
+  }
 }
 
 .john {
@@ -175,20 +176,20 @@ div.slide2 {
       text-align: left;
     }
   }
-}
-
-.john:hover {
-  background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url("John.png");
-    p {
-      visibility: visible;
-      animation: 0.3s slideIn 0s forwards;
-      transform:translateX(-100%);
-    }
+  &:hover,
+  &:focus {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("John.png");
+      p {
+        visibility: visible;
+        animation: 0.3s slideIn 0s forwards;
+        transform:translateX(-100%);
+      }
+  }
 }
 
 .lineup {
@@ -222,10 +223,11 @@ div.slide2 {
 }
 
 .lineupCardWrap {
+  z-index: 2;
   visibility: hidden;
   position: absolute;
-  left: 50%;
-  top: 150%;
+  left: 39%;
+  top: 115%;
   transform: translate(-50%,-50%);
   width: 20vw;
   height: 600px;
@@ -235,6 +237,8 @@ div.slide2 {
   box-shadow: 0px 0px 18px rgba(22, 22, 22, 0.85);
   border-radius: 100px;
   color: white;
+  transform: scale(0) translateY(80%);
+  transition: 0.01s ease-out;
   .lineup-card {
     display: grid;
     grid-template-rows: 9vw 2fr;
@@ -272,15 +276,39 @@ div.slide2 {
       font-size: 1.5rem;
     }
     img {
+      user-select: none;
       grid-area: img;
       width: 100%;
       height: 100%;
     }
   }
+  &.visible {
+    visibility: visible;
+    transform: scale(1) translateY(20%);
+    transition: 0.04s ease-out;
+    bottom: 100%;
+  }
 }
 
-.visible {
-  visibility: visible !important;
+.backgroundDarkener {
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  left: 0%;
+  top: 107.9%;
+  transform: translate(-50%,-50%);
+  height: 92vh;
+  width: 99.33vw;
+  background-color: rgba(0,0,0,0.5);
+  transform: scale(0);
+  transition: 0.045s ease-out;
+  &.darker {
+    position: absolute;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.045s ease-out;
+    bottom: 100%;
+  }
 }
 
 .rainbow {
@@ -298,6 +326,7 @@ a.rainbow:hover {
 .sticky {
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 #downarrow {

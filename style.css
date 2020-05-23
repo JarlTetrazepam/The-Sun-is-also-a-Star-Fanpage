@@ -74,6 +74,7 @@ div.slide1 div.arrowcontainer a {
 }
 
 div.navdivmain2 {
+  z-index: 10;
   background-color: #19767d;
   height: 8vh;
   width: 100%;
@@ -105,7 +106,7 @@ div.slide2 {
 }
 
 .slide2Grid {
-  height: 92vh;
+  height: 92.1vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1.618fr 1fr;
@@ -132,11 +133,10 @@ div.slide2 {
   visibility: hidden;
   text-align: right;
 }
-
-.natasha:hover {
+.natasha:hover, .natasha:focus {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Natasha.png");
 }
-.natasha:hover p {
+.natasha:hover p, .natasha:focus p {
   visibility: visible;
   text-align: right;
   animation: 0.3s slideIn 0s forwards;
@@ -161,11 +161,10 @@ div.slide2 {
   visibility: hidden;
   text-align: left;
 }
-
-.john:hover {
+.john:hover, .john:focus {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("John.png");
 }
-.john:hover p {
+.john:hover p, .john:focus p {
   visibility: visible;
   animation: 0.3s slideIn 0s forwards;
   transform: translateX(-100%);
@@ -202,10 +201,11 @@ div.slide2 {
 }
 
 .lineupCardWrap {
+  z-index: 2;
   visibility: hidden;
   position: absolute;
-  left: 50%;
-  top: 150%;
+  left: 39%;
+  top: 115%;
   transform: translate(-50%, -50%);
   width: 20vw;
   height: 600px;
@@ -215,6 +215,8 @@ div.slide2 {
   box-shadow: 0px 0px 18px rgba(22, 22, 22, 0.85);
   border-radius: 100px;
   color: white;
+  transform: scale(0) translateY(80%);
+  transition: 0.01s ease-out;
 }
 .lineupCardWrap .lineup-card {
   display: grid;
@@ -253,13 +255,37 @@ div.slide2 {
   font-size: 1.5rem;
 }
 .lineupCardWrap .lineup-card img {
+  user-select: none;
   grid-area: img;
   width: 100%;
   height: 100%;
 }
+.lineupCardWrap.visible {
+  visibility: visible;
+  transform: scale(1) translateY(20%);
+  transition: 0.04s ease-out;
+  bottom: 100%;
+}
 
-.visible {
-  visibility: visible !important;
+.backgroundDarkener {
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  left: 0%;
+  top: 107.9%;
+  transform: translate(-50%, -50%);
+  height: 92vh;
+  width: 99.33vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: 0.045s ease-out;
+}
+.backgroundDarkener.darker {
+  position: absolute;
+  visibility: visible;
+  transform: scale(1);
+  transition: 0.045s ease-out;
+  bottom: 100%;
 }
 
 .rainbow {
@@ -277,6 +303,7 @@ a.rainbow:hover {
 .sticky {
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 #downarrow {
