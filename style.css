@@ -216,7 +216,7 @@ div.slide2 {
   border-radius: 100px;
   color: white;
   transform: scale(0) translateY(80%);
-  transition: 0.01s ease-out;
+  transition: 0.001s ease-out;
 }
 .lineupCardWrap .lineup-card {
   display: grid;
@@ -263,7 +263,7 @@ div.slide2 {
 .lineupCardWrap.visible {
   visibility: visible;
   transform: scale(1) translateY(20%);
-  transition: 0.04s ease-out;
+  transition: 0.02s ease-out;
   bottom: 100%;
 }
 
@@ -278,13 +278,13 @@ div.slide2 {
   width: 99.33vw;
   background-color: rgba(0, 0, 0, 0.5);
   transform: scale(0);
-  transition: 0.045s ease-out;
+  transition: 0.025s ease-out;
 }
 .backgroundDarkener.darker {
   position: absolute;
   visibility: visible;
   transform: scale(1);
-  transition: 0.045s ease-out;
+  transition: 0.025s ease-out;
   bottom: 100%;
 }
 

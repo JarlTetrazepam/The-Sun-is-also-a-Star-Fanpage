@@ -82,6 +82,66 @@
                     In bibendum commodo eros, id consectetur nulla consectetur in. Vivamus scelerisque metus in tincidunt feugiat. </span>
               </div>
             </div>
+            <div class="lineupCardWrap patricia">
+              <div class="lineup-card">
+                  <img src="Patricia.png" alt="Patricia Kingsley">
+                  <span class="head"><p class="cardTitle">Patricia Kingsley</p>
+                                    <p class="cardSubtitle">Mother of Natasha</p></span>
+                  <span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac rutrum metus. Proin placerat nunc eu tellus convallis, in fringilla justo sollicitudin.
+                    In scelerisque lectus in dui tempus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae imperdiet sem.
+                    In bibendum commodo eros, id consectetur nulla consectetur in. Vivamus scelerisque metus in tincidunt feugiat. </span>
+              </div>
+            </div>
+            <div class="lineupCardWrap samuel">
+              <div class="lineup-card">
+                  <img src="Samuel.png" alt="Samuel Kingsley">
+                  <span class="head"><p class="cardTitle">Samuel Kingsley</p>
+                                    <p class="cardSubtitle">Father of Natasha</p></span>
+                  <span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac rutrum metus. Proin placerat nunc eu tellus convallis, in fringilla justo sollicitudin.
+                    In scelerisque lectus in dui tempus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae imperdiet sem.
+                    In bibendum commodo eros, id consectetur nulla consectetur in. Vivamus scelerisque metus in tincidunt feugiat. </span>
+              </div>
+            </div>
+            <div class="lineupCardWrap jeremy">
+              <div class="lineup-card">
+                  <img src="Jeremy.png" alt="Jeremy Martinez">
+                  <span class="head"><p class="cardTitle">Jeremy Martinez</p>
+                                    <p class="cardSubtitle">Lawyer of Natasha<br>Interviewer of John</p></span>
+                  <span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac rutrum metus. Proin placerat nunc eu tellus convallis, in fringilla justo sollicitudin.
+                    In scelerisque lectus in dui tempus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae imperdiet sem.
+                    In bibendum commodo eros, id consectetur nulla consectetur in. Vivamus scelerisque metus in tincidunt feugiat. </span>
+              </div>
+            </div>
+            <div class="lineupCardWrap charles">
+              <div class="lineup-card">
+                  <img src="Charles.png" alt="Charles Bae">
+                  <span class="head"><p class="cardTitle">Charles Bae</p>
+                                    <p class="cardSubtitle">Brother of John</p></span>
+                  <span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac rutrum metus. Proin placerat nunc eu tellus convallis, in fringilla justo sollicitudin.
+                    In scelerisque lectus in dui tempus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae imperdiet sem.
+                    In bibendum commodo eros, id consectetur nulla consectetur in. Vivamus scelerisque metus in tincidunt feugiat. </span>
+              </div>
+            </div>
+            <div class="lineupCardWrap dae">
+              <div class="lineup-card">
+                  <img src="Dae.png" alt="Dae Hyun Bae">
+                  <span class="head"><p class="cardTitle">Dae Hyung Bae</p>
+                                    <p class="cardSubtitle">Father of John</p></span>
+                  <span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac rutrum metus. Proin placerat nunc eu tellus convallis, in fringilla justo sollicitudin.
+                    In scelerisque lectus in dui tempus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae imperdiet sem.
+                    In bibendum commodo eros, id consectetur nulla consectetur in. Vivamus scelerisque metus in tincidunt feugiat. </span>
+              </div>
+            </div>
+            <div class="lineupCardWrap min">
+              <div class="lineup-card">
+                  <img src="Min.png" alt="Min Soo Bae">
+                  <span class="head"><p class="cardTitle">Min Soo Bae</p>
+                                    <p class="cardSubtitle">Mother of John</p></span>
+                  <span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac rutrum metus. Proin placerat nunc eu tellus convallis, in fringilla justo sollicitudin.
+                    In scelerisque lectus in dui tempus scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae imperdiet sem.
+                    In bibendum commodo eros, id consectetur nulla consectetur in. Vivamus scelerisque metus in tincidunt feugiat. </span>
+              </div>
+            </div>
         </div>
       </div>
     <script>
@@ -138,19 +198,89 @@
       });
 
       //Flashcards
-      var peter = document.querySelector('#peter');
-      var peterClass = document.querySelector('.peter');
-      var removal = document.querySelector('.backgroundDarkener');
       var toBeDarkened = document.querySelector('.backgroundDarkener');
 
-      removal.addEventListener('click',function(){
-          peterClass.classList.toggle('visible');
+      function remove(clazz) {
+        var toBeDarkened = document.querySelector('.backgroundDarkener');
+        var lineupCardWrap = document.querySelector('.lineupCardWrap');
+
+        clazz.classList.remove('visible');
+        toBeDarkened.classList.remove('darker');
+      }
+
+    /*  removal.addEventListener('click',function(){
+           remove();
+         });  */
+
+      var peter = document.querySelector('#peter');
+      var peterClass = document.querySelector('.peter');
+       peter.addEventListener('click',function(){
+           peterClass.classList.toggle('visible');
+           toBeDarkened.classList.toggle('darker');
+         });
+       toBeDarkened.addEventListener('click',function(){
+            remove(peterClass);
+          });
+
+      var patricia = document.querySelector('#patricia');
+      var patriciaClass = document.querySelector('.patricia');
+      patricia.addEventListener('click',function(){
+          patriciaClass.classList.toggle('visible');
+          toBeDarkened.classList.add('darker');
+        });
+        toBeDarkened.addEventListener('click',function(){
+             remove(patriciaClass);
+           });
+
+      var samuel = document.querySelector('#samuel');
+      var samuelClass = document.querySelector('.samuel');
+      samuel.addEventListener('click',function(){
+          samuelClass.classList.toggle('visible');
           toBeDarkened.classList.toggle('darker');
         });
-      peter.addEventListener('click',function(){
-          peterClass.classList.toggle('visible');
-          toBeDarkened.classList.toggle('darker');
+        toBeDarkened.addEventListener('click',function(){
+             remove(samuelClass);
+           });
+
+      var jeremy = document.querySelector('#jeremy');
+      var jeremyClass = document.querySelector('.jeremy');
+      jeremy.addEventListener('click',function(){
+          jeremyClass.classList.toggle('visible');
+          toBeDarkened.classList.add('darker');
         });
+        toBeDarkened.addEventListener('click',function(){
+             remove(jeremyClass);
+           });
+
+      var charles = document.querySelector('#charles');
+      var charlesClass = document.querySelector('.charles');
+      charles.addEventListener('click',function(){
+          charlesClass.classList.toggle('visible');
+          toBeDarkened.classList.add('darker');
+        });
+        toBeDarkened.addEventListener('click',function(){
+             remove(charlesClass);
+           });
+
+      var dae = document.querySelector('#dae');
+      var daeClass = document.querySelector('.dae');
+      dae.addEventListener('click',function(){
+          daeClass.classList.toggle('visible');
+          toBeDarkened.classList.add('darker');
+        });
+        toBeDarkened.addEventListener('click',function(){
+             remove(daeClass);
+           });
+
+      var min = document.querySelector('#min');
+      var minClass = document.querySelector('.min');
+      min.addEventListener('click',function(){
+          minClass.classList.toggle('visible');
+          toBeDarkened.classList.add('darker');
+        });
+        toBeDarkened.addEventListener('click',function(){
+             remove(minClass);
+           });
 
     </script>
   </body>
