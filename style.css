@@ -85,6 +85,8 @@ div.slide1 div.arrowcontainer a {
   visibility: hidden;
   z-index: 10;
   background-image: url("navbar.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 8vh;
   height: 8vh;
   width: 100%;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
@@ -325,6 +327,35 @@ div.slide1 div.arrowcontainer a {
 
 .slide3 {
   height: 92vh;
+  background-image: url("castBackground.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCast {
+  background-color: #19767d;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.23);
+  height: 87%;
+  width: 50%;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #F4C66B;
+  font-size: 64px;
+  justify-content: center;
+}
+.containerCast img {
+  height: 30%;
+  width: 100%;
+}
+.containerCast .table {
+  border-radius: 0 0 30px 30px;
+  align-self: flex-end;
+  height: 60%;
+  width: 100%;
   background-color: red;
 }
 

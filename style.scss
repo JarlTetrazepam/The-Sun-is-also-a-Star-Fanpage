@@ -91,6 +91,8 @@ div.slide1{
   visibility: hidden;
   z-index: 10;
   background-image: url("navbar.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 8vh;
   height: 8vh;
   width: 100%;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
@@ -350,7 +352,37 @@ div.slide1{
 
 .slide3{
   height: 92vh;
-  background-color: red;
+  background-image: url("castBackground.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCast {
+  background-color: $textcolor;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.23);
+  height: 87%;
+  width: 50%;
+  border-radius: 30px;
+  display: flex;
+  //flex-direction: column;
+  flex-wrap: wrap;
+  color: $goldLike;
+  font-size: 64px;
+  justify-content: center;
+  img {
+    height: 30%;
+    width: 100%;
+  }
+  .table {
+    border-radius: 0 0 30px 30px;
+    align-self: flex-end;
+    height: 60%;
+    width: 100%;
+    background-color: red;
+  }
 }
 
 .slide4 {
