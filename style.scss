@@ -366,14 +366,15 @@ div.slide1{
 .containerCast {
   background-color: $textcolor;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.23);
-  height: 87%;
-  width: 50%;
+  height: 80%;
+  width: 50vw;
   border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
   color: $goldLike;
-  font-size: 64px;
+  font-size: calc(.5rem + 2vw);
   justify-content: center;
+  margin-bottom: 1px;
   img {
     height: 30%;
     width: 100%;
@@ -395,17 +396,30 @@ div.slide1{
     }
     details {
       padding: 10px;
-      font-size: 30px;
+      font-size: calc(0.9rem + 1vw);
+      justify-content: space-around;
       summary {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        div {
+          display: flex;
+          justify-content: flex-start;
+          width: 40em;
+          padding-left: 5%;
+        }
+        i {
+          margin: auto;
+        }
         img {
           max-height: 60px;
           max-width: 60px;
+          margin-right: -2vw;
+          margin-left: 1vw;
           &.dropDownArrow {
             max-width: 35.5px;
             max-height: 40px;
+            margin-right: 1vw;
           }
         }
       }
@@ -416,13 +430,19 @@ div.slide1{
         align-items: center;
         justify-content: space-around;
         img {
-          max-width: 200px;
-          max-height: 230px;
+          max-width: 280px;
+          max-height: 320px;
           margin-right: 2%;
         }
         p {
           font-size: 25px;
           line-height: 1.5;
+        }
+      }
+      &[open] {
+        summary {
+          padding-bottom: 10px;
+          border-bottom: 1px dashed $textcolor;
         }
       }
     }

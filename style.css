@@ -338,14 +338,15 @@ div.slide1 div.arrowcontainer a {
 .containerCast {
   background-color: #19767d;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.23);
-  height: 87%;
-  width: 50%;
+  height: 80%;
+  width: 50vw;
   border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
   color: #F4C66B;
-  font-size: 64px;
+  font-size: calc(.5rem + 2vw);
   justify-content: center;
+  margin-bottom: 1px;
 }
 .containerCast img {
   height: 30%;
@@ -369,20 +370,33 @@ div.slide1 div.arrowcontainer a {
 }
 .containerCast .table details {
   padding: 10px;
-  font-size: 30px;
+  font-size: calc(0.9rem + 1vw);
+  justify-content: space-around;
 }
 .containerCast .table details summary {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+}
+.containerCast .table details summary div {
+  display: flex;
+  justify-content: flex-start;
+  width: 40em;
+  padding-left: 5%;
+}
+.containerCast .table details summary i {
+  margin: auto;
 }
 .containerCast .table details summary img {
   max-height: 60px;
   max-width: 60px;
+  margin-right: -2vw;
+  margin-left: 1vw;
 }
 .containerCast .table details summary img.dropDownArrow {
   max-width: 35.5px;
   max-height: 40px;
+  margin-right: 1vw;
 }
 .containerCast .table details div {
   margin: 10px 30px;
@@ -392,13 +406,17 @@ div.slide1 div.arrowcontainer a {
   justify-content: space-around;
 }
 .containerCast .table details div img {
-  max-width: 200px;
-  max-height: 230px;
+  max-width: 280px;
+  max-height: 320px;
   margin-right: 2%;
 }
 .containerCast .table details div p {
   font-size: 25px;
   line-height: 1.5;
+}
+.containerCast .table details[open] summary {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #19767d;
 }
 
 .slide4 {
