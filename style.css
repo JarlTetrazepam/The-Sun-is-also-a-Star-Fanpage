@@ -1,8 +1,7 @@
 html {
   font-family: "Futura", "Century Gothic", "sans-serif";
-  /*  overflow: scroll;
-    overflow-y: hidden;
-    overflow-x: hidden; */
+  overflow-y: hidden;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
@@ -353,7 +352,7 @@ div.slide1 div.arrowcontainer a {
   width: 100%;
 }
 .containerCast .table {
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   border-radius: 0 0 30px 30px;
   align-self: flex-end;
@@ -412,7 +411,7 @@ div.slide1 div.arrowcontainer a {
   border-radius: 30px;
 }
 .containerCast .table details div p {
-  font-size: 25px;
+  font-size: calc(0.9rem + .5vw);
   line-height: 1.5;
 }
 .containerCast .table details div p i {
@@ -425,7 +424,57 @@ div.slide1 div.arrowcontainer a {
 
 .slide4 {
   height: 92vh;
-  background-color: blue;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: hidden;
+}
+.slide4 div.wrapper {
+  width: 55vw;
+  height: 97%;
+}
+.slide4 div.wrapper .containerQuotes {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 5vh;
+}
+.slide4 div.wrapper .containerQuotes div {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.382fr 0.618fr;
+  grid-template-areas: ". q";
+  grid-template-rows: 1fr;
+  justify-items: end;
+  margin: 3vh;
+  line-height: 1.4;
+  font-size: calc(.5rem + 1vw);
+  font-weight: bold;
+  color: #19767d;
+}
+.slide4 div.wrapper .containerQuotes div span {
+  grid-area: q;
+  text-align: right;
+}
+.slide4 div.wrapper .containerQuotes div span i {
+  font-size: calc(.5rem + 1.6vw);
+}
+.slide4 div.wrapper .containerQuotes div span i::before {
+  content: open-quote;
+}
+.slide4 div.wrapper .containerQuotes div span i::after {
+  content: close-quote;
+}
+.slide4 div.wrapper .containerQuotes div:nth-child(odd) {
+  grid-template-columns: 0.618fr 0.382fr;
+  grid-template-areas: "q .";
+  justify-items: start;
+}
+.slide4 div.wrapper .containerQuotes div:nth-child(odd) span {
+  text-align: left;
 }
 
 .rainbow {
