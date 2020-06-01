@@ -409,10 +409,14 @@ div.slide1 div.arrowcontainer a {
   max-width: 280px;
   max-height: 320px;
   margin-right: 2%;
+  border-radius: 30px;
 }
 .containerCast .table details div p {
   font-size: 25px;
   line-height: 1.5;
+}
+.containerCast .table details div p i {
+  font-size: 0.9em;
 }
 .containerCast .table details[open] summary {
   padding-bottom: 10px;
