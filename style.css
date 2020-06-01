@@ -347,6 +347,9 @@ div.slide1 div.arrowcontainer a {
   justify-content: center;
   margin-bottom: 1px;
 }
+.containerCast .ss-wrapper {
+  z-index: 0;
+}
 .containerCast img {
   height: 30%;
   width: 100%;

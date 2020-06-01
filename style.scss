@@ -374,6 +374,9 @@ div.slide1{
   font-size: calc(.5rem + 2vw);
   justify-content: center;
   margin-bottom: 1px;
+  .ss-wrapper {
+    z-index: 0;
+  }
   img {
     height: 30%;
     width: 100%;
