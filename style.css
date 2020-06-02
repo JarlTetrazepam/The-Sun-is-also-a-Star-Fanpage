@@ -58,6 +58,7 @@ div.slide1 div.bodydiv1 div.navdiv2 ul li a {
   background-size: 200% 200%;
   animation: rainbow 1.8s ease-in infinite;
   background-clip: text;
+  -webkit-background-clip: text;
 }
 div.slide1 div.bodydiv1 div.navdiv2 ul li:hover {
   background-color: #19767d;
@@ -379,6 +380,11 @@ div.slide1 div.arrowcontainer a {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
+}
+.containerCast .table details summary::-webkit-details-marker {
+  display: none;
+  outline: none;
 }
 .containerCast .table details summary div {
   display: flex;
@@ -491,6 +497,7 @@ div.slide1 div.arrowcontainer a {
   background-size: 200% 200%;
   animation: rainbow 1.8s ease-in infinite;
   background-clip: text;
+  -webkit-background-clip: text;
 }
 .rainbow.slower {
   animation: rainbow 8s ease-in infinite;

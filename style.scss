@@ -64,6 +64,7 @@ div.slide1{
             background-size: 200% 200%;
             animation: rainbow 1.8s ease-in infinite;
             background-clip: text;
+            -webkit-background-clip: text;
           }
         }
         li:hover {
@@ -404,6 +405,11 @@ div.slide1{
         display: flex;
         justify-content: center;
         align-items: center;
+        outline: none;
+        &::-webkit-details-marker {
+          display: none;
+          outline: none;
+        }
         div {
           display: flex;
           justify-content: flex-start;
@@ -521,6 +527,7 @@ div.slide1{
   background-size: 200% 200%;
   animation: rainbow 1.8s ease-in infinite;
   background-clip: text;
+  -webkit-background-clip: text;
   &.slower {
     animation: rainbow 8s ease-in infinite;
   }
