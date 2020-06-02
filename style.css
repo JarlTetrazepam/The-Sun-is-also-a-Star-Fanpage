@@ -109,6 +109,7 @@ div.slide1 div.arrowcontainer a {
 }
 .navdivmain2 ul li:hover a {
   color: rgba(0, 0, 0, 0.0001);
+  cursor: pointer;
 }
 .navdivmain2.sticky {
   visibility: visible;
@@ -239,9 +240,8 @@ div.slide1 div.arrowcontainer a {
   top: 110%;
   transform: translate(-50%, -50%);
   width: 20vw;
-  height: 600px;
+  height: 47%;
   padding: 30px;
-  background: blue;
   background: #1E1E1E;
   box-shadow: 0px 0px 19px rgba(22, 22, 22, 0.85);
   border-radius: 100px;
@@ -254,14 +254,16 @@ div.slide1 div.arrowcontainer a {
   grid-template-rows: 9vw 2fr;
   grid-template-columns: 9vw 1fr;
   grid-template-areas: "img head" "p p";
-  height: inherit;
+  grid-gap: 10px;
+  height: 50%;
 }
 .lineupCardWrap .lineup-card span.head {
   padding: 5px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   grid-area: head;
-  align-items: center;
+  justify-content: center;
   font-weight: bold;
 }
 .lineupCardWrap .lineup-card span.head p {
@@ -273,11 +275,9 @@ div.slide1 div.arrowcontainer a {
   margin-bottom: 0em;
 }
 .lineupCardWrap .lineup-card span.head p.cardSubtitle {
-  margin-top: -3em;
   font-size: 1.4rem;
 }
 .lineupCardWrap .lineup-card span.head p#jeremySubtitle {
-  margin-top: -1.5em;
   font-size: 1.4rem;
 }
 .lineupCardWrap .lineup-card span.body {
@@ -442,7 +442,7 @@ div.slide1 div.arrowcontainer a {
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: hidden;
-  padding: 5vh;
+  padding: 5vw;
 }
 .slide4 div.wrapper .containerQuotes div {
   height: 100%;
@@ -454,13 +454,17 @@ div.slide1 div.arrowcontainer a {
   justify-items: end;
   margin: 3vh;
   line-height: 1.4;
-  font-size: calc(.5rem + 1vw);
+  font-size: calc(.3rem + 1vw);
   font-weight: bold;
   color: #19767d;
 }
 .slide4 div.wrapper .containerQuotes div span {
   grid-area: q;
   text-align: right;
+}
+.slide4 div.wrapper .containerQuotes div span.opaque {
+  color: rgba(0, 0, 0, 0.0001);
+  font-weight: bold;
 }
 .slide4 div.wrapper .containerQuotes div span i {
   font-size: calc(.5rem + 1.6vw);
@@ -476,8 +480,9 @@ div.slide1 div.arrowcontainer a {
   grid-template-areas: "q .";
   justify-items: start;
 }
-.slide4 div.wrapper .containerQuotes div:nth-child(odd) span {
+.slide4 div.wrapper .containerQuotes div:nth-child(odd) span:not(.rainbow) {
   text-align: left;
+  padding-right: 1vw;
 }
 
 .rainbow {
@@ -486,6 +491,9 @@ div.slide1 div.arrowcontainer a {
   background-size: 200% 200%;
   animation: rainbow 1.8s ease-in infinite;
   background-clip: text;
+}
+.rainbow.slower {
+  animation: rainbow 8s ease-in infinite;
 }
 
 a.rainbow:hover {
@@ -513,6 +521,38 @@ a.rainbow:hover {
     transform: translateX(0);
   }
 }
+@media (max-width: 1921px) {
+  div.lineupCardWrap {
+    height: 66%;
+    width: 500px;
+  }
+  div.lineupCardWrap .lineup-card {
+    width: 100%;
+  }
+  div.lineupCardWrap .lineup-card span.head p.cardSubtitle,
+div.lineupCardWrap .lineup-card span.head p#jeremySubtitle {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1500px) {
+  div.lineupCardWrap {
+    height: 65%;
+    width: 45%;
+    left: 25.55%;
+  }
+  div.lineupCardWrap .lineup-card span.head {
+    flex-wrap: nowrap;
+  }
+  div.lineupCardWrap .lineup-card span.head p.cardTitle {
+    font-size: 2.2rem;
+  }
+  div.lineupCardWrap .lineup-card span.head p.cardSubtitle,
+div.lineupCardWrap .lineup-card span.head p#jeremySubtitle {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+}
 @media (max-width: 1327px) {
   img#headimg {
     width: calc(35vw * 2 + 40px);
@@ -526,6 +566,19 @@ a.rainbow:hover {
   }
 }
 @media (max-width: 800px) {
+  div.lineupCardWrap {
+    height: 10%;
+    width: 500px;
+  }
+  div.lineupCardWrap .lineup-card {
+    width: 100%;
+  }
+  div.lineupCardWrap .lineup-card span.head p.cardSubtitle,
+div.lineupCardWrap .lineup-card span.head p#jeremySubtitle {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+
   ul#navbar li {
     font-size: calc(1.7rem + 4vw);
   }
